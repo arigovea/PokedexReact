@@ -24,6 +24,14 @@ class Profile extends Component {
                      src = {sprites.front_default}/> </Col>
 
                    }
+                   {
+                     sprites.back_default === null ? null : 
+                     <Col md="6">
+                     <label>Back</label>
+                     <img alt={name} 
+                     src = {sprites.back_default}/> </Col>
+
+                   }
              
                   {
                      sprites.front_female === null ? null : 
