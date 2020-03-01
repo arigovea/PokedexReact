@@ -3,6 +3,7 @@ import { Form, FormGroup, Label,Input,Container,Row,Col, Button, Alert} from 're
 import * as yup from 'yup';
 import {getPokemon} from '../../services/pokemonServices';
 import Pokemon from './Pokemon';
+
 class Search extends Component{
     constructor(props){
         super(props)
@@ -16,7 +17,7 @@ class Search extends Component{
 
     onChange = (event) => {
         const name = event.target.value
-        this.setState({name})
+        this.setState({name});
     }
 
     onClick = async (event) => {
@@ -54,22 +55,22 @@ class Search extends Component{
                     <Form>
                         <FormGroup>
                             <Label for="pokemon">
-                                Pokemon a buscar:
+                                Search a Pokemon:
                             </Label>
                             <Input 
                             type="text" 
                             name="pokemon" 
-                            placeholder="Nombre" 
+                            placeholder="Name" 
                             value={this.state.name}
                             onChange={this.onChange}
                             invalid={!this.state.isNameValid}
                                 />
-                                {!this.state.pokemonExists && <Alert color='danger'>El pokemon no existe</Alert>}
+                                {!this.state.pokemonExists && <Alert color='danger'>This Pokemon does not exist!</Alert>}
                             <Button 
-                            outline color="danger" 
+                            outline color="warning" 
                             size="lg" block
                             onClick={this.onClick}
-                            >Buscar
+                            >Search
                             </Button>
                         </FormGroup>
                     </Form>

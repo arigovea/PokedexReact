@@ -9,27 +9,26 @@ class Pokemon extends Component{
         }
     }
     render(){
-        const { name, id, sprites} = this.props.pokemon
-        return <Row>
-            <Col md={8}>
+        const { name, id, sprites, types} = this.props.pokemon
+        return <Row className="pokemon-box" id="container-pokemon">
+            <Col md={5}>
                 <img alt={name} 
                 src = {sprites.front_default}/>
             </Col>
-            <Col md={4}>
+            <Col md={7}>
                 <ul>
                 <li>Id: {id}</li>
-                <li>Nombre: {name} </li>
-                <li>
-                    <Button 
-                    outline color="warning"
+                <li>Name: {name} </li>
+                <li>Type: {types[0].type.name}</li>
+                </ul>
+            </Col>
+            <Button 
+                    color="warning"
                     onClick = {() => {
                         this.props.catchPokemon({
                             name, id, sprites
                         })
                     }}>Catch!</Button>
-                </li>
-                </ul>
-            </Col>
 
         </Row>
     }

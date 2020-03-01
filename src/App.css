@@ -1,38 +1,127 @@
+
 .App {
   text-align: center;
+  width: 99%;
+  max-width: 850px;
+}
+body{
+  background-image: url("https://c.wallhere.com/photos/e0/be/Pok_mon_tile_cartoon_pattern-1558631.jpg!d");
+  background-size: cover;
+}
+.nav-tabs {
+  background-color: #C5915D;
+}
+.nav-item{
+  padding: 15px;
+}
+.nav-item a:visited, 
+.nav-item a:link,
+.nav-item a:active{
+  color: #FCF3E4;
+}
+.nav-item a:hover{
+  color: #332011;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  background-color: white;
+  height: 650px;
+  padding-top: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-block {
+  margin: 15px 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
+  text-align: center;
+}
+.form-group label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.col-md-5{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.col-md-5 img{
+  display: block;
+  margin: auto;
+  width: 75%;
+}
+.col-md-7{
+  display: flex;
+  justify-content: flex-start;
+}
+.pokemon-box{
+  margin: 30px;
+  background-color:rgba(230, 202, 154, 0.219);
+  height: auto;
+  width: 85%;
+  justify-items: center;
+}
+.pokemon-box ul{
+  margin: auto 0px;
+  list-style-type: none;
+}
+.pokemon-box ul li{
+  margin: 10px
+}
+#container-pokemon button{
+  margin: 25px auto;
+}
+#container-pokemon{
+  margin-left: auto;
+  margin-right: auto;
+  border: rgb(226, 170, 66) solid 3px;
+}
+#pokedex-card {
+  border: rgb(167, 187, 216) solid 3px;
+  margin: 5px;
+  background-color: rgba(245, 255, 250, 0.548);
+  height: auto;
+}
+#pokedex-card .col-md-7{
+  justify-content: center;
+  height: auto;
+  margin-bottom: 20px;
+}
+#pokedex-card .col-md-7 ul{
+  margin: auto 0;
+  list-style-type: none;
+}
+#pokedex-card .col-md-7 ul li{
+  margin: 10px;
+  text-align: center;
+}
+#pokedex-card .col-md-7 button{
+  margin-left: 40px;
+}
+#profile-card h2, h3{
+  text-align: center;
+}
+#profile-card .col-md-6{
+  display: block;
+  margin: 10px 0;
+  height: 250px;
+  text-align: center;
+  margin-top: 50px;
+}
+.col-md-6 img{
+  display: block;
+  margin: auto;
+  width: 75%;
+}
+.col-md-6 label{
+  height: 20px;
+  margin-left: auto;
+  font-size: larger;
+  font-weight: bold;
+}
+#profile-card{
+  height: auto;
+  padding-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  height: auto;
 }

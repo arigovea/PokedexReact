@@ -36,11 +36,9 @@ class App extends Component{
         <Col md='8'>
         <Switch>
           <Route path='/pokedex'>
-            <Pokedex pokemons={this.state.pokemons}/>
+            <Pokedex pokemons={this.state.pokemons} />
           </Route>
-          <Route path = '/profile'>
-            <Profile/>
-          </Route>
+          <Route path = '/profile' component = {Profile}/>
           <Route path = "/">
             <Search catchPokemon={this.catchPokemon} />
             </Route>

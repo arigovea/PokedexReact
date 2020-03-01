@@ -6,20 +6,23 @@ import {Link} from 'react-router-dom';
 class Pokedex extends Component {
     render(){
         const{ pokemons } = this.props
-        console.log(this.props.pokemons.length)
+        console.log(this.props.pokemons)
     return <Container>
         {
             pokemons.map(p => (
-                <Row>
-                    <Col md="6">
+                <Row id="pokedex-card">
+                    <Col md="5">
                         <img alt = {p.name} src={p.sprites.front_default}/>
                     </Col>
-                    <Col md="6">
+                    <Col md="7">
                         <ul>
                             <li>Id: {p.id}</li>
-                            <li>Nombre: {p.name}</li>
-                            <Link to="/Profile">
-                            <Button outline color="success">
+                            <li>Name: {p.name}</li>
+                            <Link to={{
+                                    pathname: "/profile",
+                                    state: {pokemon: p}
+                            }}>
+                            <Button outline color="info">
                                 Profile</Button>
                             </Link>
                             
