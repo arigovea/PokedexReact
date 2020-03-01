@@ -66,7 +66,7 @@ class Profile extends Component {
                      <Col md="6">
                      <label>Front Shiny Female</label>
                      <img alt={name} 
-                     src = {sprites.shiny_female}/> </Col>
+                     src = {sprites.front_shiny_female}/> </Col>
                   }
                   {
                      sprites.back_shiny_female === null ? null : 
